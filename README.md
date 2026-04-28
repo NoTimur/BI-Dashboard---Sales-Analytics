@@ -34,17 +34,15 @@ Excel-файл с 11 таблицами:
 ---
 
 ## 🏗 Архитектура модели данных
-
-### Galaxy Schema
-
-**Почему Galaxy Schema:**
+![Overview](screenshots/photo_2_2026-04-28_21-24-59.jpg)
+**Почему была выбрана Galaxy Schema:**
 - SalesData и ReturnsData имеют разную гранулярность — объединение привело бы к дублированию строк и некорректным агрегациям
 - Конформные измерения (Products, Customers, Manufacturers, Promotions) позволяют считать сквозные метрики — Return Rate и Return Share в разрезе любого измерения
 ---
 ## ⚙️ ETL Pipeline
 
 Источник данных: Excel → Pyramid In-Memory DB
-
+![Overview](screenshots/photo_1_2026-04-28_21-24-59.jpg)
 **Шаги обработки:**
 1. Загрузка всех 11 таблиц из Excel
 2. Применение **Time Intelligence** к SalesData и ReturnsData — автоматическое создание Year, Quarter, Month, Week
@@ -61,7 +59,7 @@ Excel-файл с 11 таблицами:
 
 ### Страница 1: Sales Overview
 
-![Overview](screenshots/overview.png)
+![Overview](screenshots/1.png)
 
 **Бизнес-вопрос:** как работает бизнес в целом?
 
@@ -76,7 +74,7 @@ Excel-файл с 11 таблицами:
 
 ### Страница 2: Products & Customers
 
-![Products & Customers](screenshots/products_customers.png)
+![Products & Customers](screenshots/2.png)
 
 **Бизнес-вопрос:** что и кому продаём?
 
@@ -92,7 +90,7 @@ Excel-файл с 11 таблицами:
 
 ### Страница 3: Returns
 
-![Returns](screenshots/returns.png)
+![Returns](screenshots/3.png)
 
 **Бизнес-вопрос:** где теряем деньги после продажи?
 
